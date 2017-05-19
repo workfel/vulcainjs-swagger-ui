@@ -8,7 +8,7 @@ export interface ISwaggerOptions {
 
 }
 
-@Injectable(LifeTime.Singleton, 'SwaggerUi')
+@Injectable(LifeTime.Singleton, 'SwaggerUiService')
 export class SwaggerUiService {
 
     register(adapter: ExpressAdapter, options: ISwaggerOptions = {}) {

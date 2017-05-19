@@ -23,7 +23,7 @@ let SwaggerUiService = class SwaggerUiService {
     }
 };
 SwaggerUiService = __decorate([
-    dist_1.Injectable(dist_1.LifeTime.Singleton, 'SwaggerUi')
+    dist_1.Injectable(dist_1.LifeTime.Singleton, 'SwaggerUiService')
 ], SwaggerUiService);
 exports.SwaggerUiService = SwaggerUiService;
 
