@@ -1,8 +1,8 @@
 {
     "name": "vulcainjs-swagger-ui",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "An easy swagger-ui for vulcainjs",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -24,6 +24,9 @@
         "url": "https://github.com/workfel/vulcainjs-swagger-ui/issues"
     },
     "homepage": "https://github.com/workfel/vulcainjs-swagger-ui#readme",
+    "dependencies": {
+        "vulcain-corejs": "^1.1.129"
+    },
     "devDependencies": {
         "@types/express": "^4.0.35",
         "fs-extra": "^3.0.1",
