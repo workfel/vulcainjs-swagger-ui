@@ -1,0 +1,27 @@
+{
+  "name": "vulcainjs-swagger-ui",
+  "version": "1.0.0",
+  "description": "An easy swagger-ui for vulcainjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workfel/vulcainjs-swagger-ui.git"
+  },
+  "keywords": [
+    "swagger",
+    "swagger-ui",
+    "nodejs",
+    "microservices",
+    "vulcain",
+    "vulcainjs"
+  ],
+  "author": "Johan PUJOL (https://github.com/workfel)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/workfel/vulcainjs-swagger-ui/issues"
+  },
+  "homepage": "https://github.com/workfel/vulcainjs-swagger-ui#readme"
+}

@@ -1,0 +1,1 @@
+# vulcainjs-swagger-ui
