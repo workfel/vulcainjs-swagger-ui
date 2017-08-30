@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const swaggerUiAssetPath = require("swagger-ui-dist").getAbsoluteFSPath();
+const swaggerUiAssetPath = require("swagger-ui-dist");
 class SwaggerTemplate {
     static getHtmlRendered(title, url) {
         return `
@@ -72,8 +72,13 @@ class SwaggerTemplate {
 
 <div id="swagger-ui"></div>
 
+<<<<<<< HEAD
 <script src="${swaggerUiAssetPath}/swagger-ui-bundle.js"> </script>
 <script src="${swaggerUiAssetPath}/swagger-ui-standalone-preset.js"> </script>
+=======
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.0.10/swagger-ui-bundle.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.0.10/swagger-ui-standalone-preset.js"> </script>
+>>>>>>> 539f14a78441204f3a60713291676859058b1c1b
 <script>
 window.onload = function() {
   // Build a system

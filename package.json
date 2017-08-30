@@ -4,7 +4,6 @@
     "description": "An easy swagger-ui for vulcainjs",
     "main": "dist/index.js",
     "scripts": {
-        "compile": "gulp",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
