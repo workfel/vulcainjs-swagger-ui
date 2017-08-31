@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const swaggerUiAssetPath = require("swagger-ui-dist");
+const swaggerUI = require("swagger-ui-dist");
+const fs = require("fs");
+const path = require("path");
+const swaggerUiAbsolutePath = swaggerUI.getAbsoluteFSPath();
 class SwaggerTemplate {
     static getHtmlRendered(title, url) {
         return `
@@ -11,9 +14,11 @@ class SwaggerTemplate {
   <meta charset="UTF-8">
   <title>${title}</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="${swaggerUiAssetPath}/swagger-ui.css" >
-  <link rel="icon" type="image/png" href="${swaggerUiAssetPath}/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="${swaggerUiAssetPath}/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="${swaggerUiAbsolutePath + '/favicon-32x32.png'}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="${swaggerUiAbsolutePath + '/favicon-16x16.png'}" sizes="16x16" />
+  <style>
+    ${fs.readFileSync(path.join(swaggerUiAbsolutePath, '/swagger-ui.css'))}
+  </style>
   <style>
     html
     {
@@ -72,13 +77,8 @@ class SwaggerTemplate {
 
 <div id="swagger-ui"></div>
 
-<<<<<<< HEAD
-<script src="${swaggerUiAssetPath}/swagger-ui-bundle.js"> </script>
-<script src="${swaggerUiAssetPath}/swagger-ui-standalone-preset.js"> </script>
-=======
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.0.10/swagger-ui-bundle.js"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.0.10/swagger-ui-standalone-preset.js"> </script>
->>>>>>> 539f14a78441204f3a60713291676859058b1c1b
+<script>${fs.readFileSync(path.join(swaggerUiAbsolutePath, '/swagger-ui-bundle.js'), 'utf-8')}</script>
+<script>${fs.readFileSync(path.join(swaggerUiAbsolutePath, '/swagger-ui-standalone-preset.js'), 'utf-8')}</script>
 <script>
 window.onload = function() {
   // Build a system
